@@ -1,0 +1,29 @@
+# Dados do PostgreSQL (gerados pelo Docker)
+postgres/data/
+
+# Dados do Grafana (volumes Docker)
+grafana-storage/
+
+# Logs gerais
+*.log
+
+# Arquivos temporários do sistema operacional
+.DS_Store
+Thumbs.db
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+*.swp
+*.swo
+*~
+
+# Arquivos de ambiente (caso você crie .env no futuro)
+.env
+.env.local
+.env.*.local
+
+# Backups
+*.bak
+*.backup
