@@ -1,0 +1,142 @@
+-- Tipo de usuário
+CREATE TYPE tipo_usuario_enum AS ENUM (
+    'SUPER_ADMIN',
+    'ADMIN',
+    'CLIENTE',
+    'CONSULTOR'
+);
+
+-- Perfil de risco
+CREATE TYPE perfil_risco_enum AS ENUM (
+    'CONSERVADOR',
+    'MODERADO',
+    'ARROJADO'
+);
+
+-- Horizonte de investimento
+CREATE TYPE horizonte_enum AS ENUM (
+    'CURTO_PRAZO',    -- até 1 ano
+    'MEDIO_PRAZO',    -- 1-5 anos
+    'LONGO_PRAZO'     -- 5+ anos
+);
+
+-- Tipo de ativo
+CREATE TYPE tipo_ativo_enum AS ENUM (
+    'STOCK',          -- Ação
+    'ETF',            -- Exchange Traded Fund
+    'REIT',           -- Real Estate Investment Trust
+    'MUTUAL_FUND',    -- Fundo de Investimento
+    'INDEX',          -- Índice
+    'CRYPTO',         -- Criptomoeda
+    'COMMODITY',      -- Commodity
+    'BOND',           -- Título de Renda Fixa
+    'OTHER'
+);
+
+-- Exchange (bolsas)
+CREATE TYPE exchange_enum AS ENUM (
+    'NASDAQ',
+    'NYSE',
+    'AMEX',
+    'XETRA',
+    'LSE',
+    'TSE',
+    'HKEX',
+    'SSE',
+    'B3',
+    'EURONEXT',
+    'OTHER'
+);
+
+-- Moeda
+CREATE TYPE moeda_enum AS ENUM (
+    'USD',
+    'EUR',
+    'BRL',
+    'GBP',
+    'JPY',
+    'CNY',
+    'HKD',
+    'CHF',
+    'CAD',
+    'AUD',
+    'OTHER'
+);
+
+-- País
+CREATE TYPE pais_enum AS ENUM (
+    'UNITED_STATES',
+    'BRAZIL',
+    'GERMANY',
+    'UNITED_KINGDOM',
+    'JAPAN',
+    'CHINA',
+    'HONG_KONG',
+    'SWITZERLAND',
+    'CANADA',
+    'AUSTRALIA',
+    'FRANCE',
+    'NETHERLANDS',
+    'OTHER'
+);
+
+-- Setor (baseado em GICS - Global Industry Classification Standard)
+CREATE TYPE setor_enum AS ENUM (
+    'TECHNOLOGY',
+    'FINANCIALS',
+    'HEALTHCARE',
+    'CONSUMER_DISCRETIONARY',
+    'CONSUMER_STAPLES',
+    'ENERGY',
+    'UTILITIES',
+    'REAL_ESTATE',
+    'MATERIALS',
+    'INDUSTRIALS',
+    'COMMUNICATION_SERVICES',
+    'OTHER'
+);
+
+-- Indústria (subsetor)
+CREATE TYPE industria_enum AS ENUM (
+    'SOFTWARE',
+    'SEMICONDUCTORS',
+    'HARDWARE',
+    'IT_SERVICES',
+    'BANKS',
+    'INSURANCE',
+    'ASSET_MANAGEMENT',
+    'CAPITAL_MARKETS',
+    'PHARMACEUTICALS',
+    'BIOTECHNOLOGY',
+    'MEDICAL_DEVICES',
+    'HEALTHCARE_SERVICES',
+    'RETAIL',
+    'AUTOMOTIVE',
+    'AEROSPACE_DEFENSE',
+    'MACHINERY',
+    'ELECTRICAL_EQUIPMENT',
+    'RETAIL_REIT',
+    'OFFICE_REIT',
+    'RESIDENTIAL_REIT',
+    'INDUSTRIAL_REIT',
+    'HEALTHCARE_REIT',
+    'DATA_CENTER_REIT',
+    'OIL_GAS',
+    'RENEWABLE_ENERGY',
+    'UTILITIES_ELECTRIC',
+    'TELECOMMUNICATIONS',
+    'MEDIA',
+    'ENTERTAINMENT',
+    'OTHER'
+);
+
+-- Fonte de dados
+CREATE TYPE fonte_dados_enum AS ENUM (
+    'ALPHA_VANTAGE',
+    'B3_UP2DATA',
+    'YAHOO_FINANCE',
+    'BLOOMBERG',
+    'REFINITIV',
+    'MANUAL',
+    'OTHER'
+);
